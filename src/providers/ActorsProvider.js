@@ -34,7 +34,9 @@ const ActorContext = createContext(undefined)
 //Provider
 export const ActorsProvider = ({children}) => {
   const [actorsData, setActorsData] = useState(data)
-  const value = {actorsData, setActorsData}
+  const [cardId, setCardId] = useState(0)
+
+  const value = {actorsData, setActorsData, cardId, setCardId}
 
   return (
     <ActorContext.Provider value={value}>
@@ -46,6 +48,7 @@ export const ActorsProvider = ({children}) => {
 //hook
 export const useActor = () => {
   const context = useContext(ActorContext)
+
   if(context === undefined) {
     throw new Error('useActor precisa ser usado dentro do provider')
   }

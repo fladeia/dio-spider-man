@@ -3,8 +3,7 @@ import { useActor } from '../../providers/ActorsProvider'
 import * as C from './styles'
 
 export const Card = () => {
-  const [cardId, setCardId] = useState()
-  const { actorsData, setActorsData } = useActor()
+  const { actorsData, setCardId } = useActor()
 
   function handleCardEnter(e) {
     e.target.classList.add('hoverd')
@@ -14,7 +13,6 @@ export const Card = () => {
   function handleCardLeave(e) {
     e.target.classList.remove('hoverd')
   }
-
 
   return (
     <C.Container>
