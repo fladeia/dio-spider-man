@@ -15,7 +15,7 @@ export const Container = styled.main`
     width: 100%;
     height: 100%;
     position: absolute;
-    opacity: 0.2;
+    opacity: ${props => props.bgOpacity};
     transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
   }
 `

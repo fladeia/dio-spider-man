@@ -24,7 +24,7 @@ export const CardBackground = styled.img`
   height: 100%;
   object-fit: cover;
   position: absolute;
-  opacity: 1;
+  opacity: ${props => props.cardOpacity};
   transition: opacity 1s ease-in-out;
 `
 

@@ -1,11 +1,11 @@
 import { createContext, useContext, useState } from "react"
-import bgMain from '../assets/images/spider-man-background.jpg'
 import cardBgTom from '../assets/images/pic-sm-bg-01.jpg'
 import cardBgTobey from '../assets/images/pic-sm-bg-02.jpg'
 import cardBgAndrew from '../assets/images/pic-sm-bg-03.jpg'
 import cardSpiderTom from '../assets/images/spider-man-01.png'
 import cardSpiderTobey from '../assets/images/spider-man-02.png'
 import cardSpiderAndrew from '../assets/images/spider-man-03.png'
+import bgMain from '../assets/images/spider-man-background.jpg'
 
 const data = [
      {
@@ -35,8 +35,10 @@ const ActorContext = createContext(undefined)
 export const ActorsProvider = ({children}) => {
   const [actorsData, setActorsData] = useState(data)
   const [cardId, setCardId] = useState(0)
+  const [bgOpacity, setBgOpacity] = useState(0.2)
+  const [cardOpacity, setCardOpacity] = useState(1)
 
-  const value = {actorsData, setActorsData, cardId, setCardId}
+  const value = {actorsData, setActorsData, cardId, setCardId, bgOpacity, setBgOpacity, cardOpacity, setCardOpacity}
 
   return (
     <ActorContext.Provider value={value}>
