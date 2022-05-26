@@ -13,9 +13,14 @@ export const CardContainer = styled.div`
   width: 30%;
   height: 70vh;
   transition: filter 0.5s ease-in-out;
-
+  
   .hoverd {
     transform: scale(1.4);
+    filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
+  }
+  
+  .disable {
+    filter: grayscale(100%);
   }
 `
 
