@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: ${props => props.pages ? '22rem' : null};
+  height: ${props => props.pages ? '40rem' : null};
   position: relative;
   display: flex;
   flex-direction: ${props => props.pages ? 'column' : 'row'};
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: ${props => props.pages ? '0' : '3rem'};;
   gap: 2.75rem;
-  background-color: ${props => props.pages ? 'black' : null};
 
   div {
     display: flex;
@@ -38,6 +37,6 @@ export const Container = styled.div`
 export const Line = styled.span`
   background-color: white;
   width: ${props => props.pages ? '2px' : '50%'};
-  height: ${props => props.pages ? '500px' : '2px'};
+  height: ${props => props.pages ? '110%' : '2px'};
   position: absolute;
 `
