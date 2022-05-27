@@ -18,6 +18,7 @@ Desenvolvido com React JS e Styled Components.
 ## 🚀 Tecnologias utilizadas
 
 - [React Js](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
 - [Styled Components](https://styled-components.com/)
 
 ---

@@ -19,7 +19,6 @@ export const Card = () => {
 
     disable.map((item, index) => {
       item.classList.add('disable')
-      console.log(item)
     })
 
   }
@@ -36,7 +35,6 @@ export const Card = () => {
 
     enable.map((item, index) => {
       item.classList.remove('disable')
-      console.log(item)
     })
   }
 

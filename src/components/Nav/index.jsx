@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useActor } from '../../providers/ActorsProvider'
 import * as C from './styles'
 import spider from '../../assets/images/spiderIcon.svg'
@@ -16,7 +17,7 @@ export const Nav = () => {
           return (
             <li key={index}>
               <img src={spider} alt='Multiverse spider'></img>
-              <a href={item.url}>{item.actor}</a>
+              <Link to={item.url}>{item.actor}</Link>
             </li>
           )
         })}

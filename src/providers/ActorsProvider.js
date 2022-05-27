@@ -12,19 +12,19 @@ const data = [
       actor: 'Tom Holland',
       background: cardBgTom,
       image: cardSpiderTom,
-      url: '#'
+      url: 'spiderman1'
     },
     {
       actor: 'Tobey Maguire',
       background: cardBgTobey,
       image: cardSpiderTobey,
-      url: '#'
+      url: 'spiderman2'
     },
     {
       actor: 'Andrew Garfield',
       background: cardBgAndrew,
       image: cardSpiderAndrew,
-      url: '#'
+      url: 'spiderman3'
     }
 ]
 
