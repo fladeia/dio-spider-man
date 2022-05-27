@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { useActor } from '../../providers/ActorsProvider'
 import * as C from './styles'
 

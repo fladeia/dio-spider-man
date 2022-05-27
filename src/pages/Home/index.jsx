@@ -22,7 +22,7 @@ export const Home = () => {
       >
         <Nav />
         <Card />
-        <CarouselConttroler />
+        <CarouselConttroler pages={false} />
       </C.Container>
     </Layout>
   )
