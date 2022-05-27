@@ -38,7 +38,16 @@ export const ActorsProvider = ({children}) => {
   const [bgOpacity, setBgOpacity] = useState(0.2)
   const [cardOpacity, setCardOpacity] = useState(1)
 
-  const value = {actorsData, setActorsData, cardId, setCardId, bgOpacity, setBgOpacity, cardOpacity, setCardOpacity}
+  const value = {
+    actorsData, 
+    setActorsData, 
+    cardId, 
+    setCardId, 
+    bgOpacity, 
+    setBgOpacity, 
+    cardOpacity, 
+    setCardOpacity
+  }
 
   return (
     <ActorContext.Provider value={value}>

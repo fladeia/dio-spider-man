@@ -22,6 +22,10 @@ export const CardContainer = styled.div`
   .disable {
     filter: grayscale(100%);
   }
+  
+  .textHover {
+    bottom: 50%;
+  }
 `
 
 export const CardBackground = styled.img`
@@ -46,7 +50,8 @@ export const CardText = styled.h2`
   text-transform: uppercase;
   text-align: center;
   position: absolute;
-  width: 100%;
   bottom: 0;
+  width: 100%;
   transition: bottom 1s ease-in-out;
+  
 `
