@@ -1,16 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: ${props => props.pages ? '40rem' : null};
-  position: relative;
-  display: flex;
-  flex-direction: ${props => props.pages ? 'column' : 'row'};
-  justify-content: center;
-  align-items: center;
-  margin-top: ${props => props.pages ? '0' : '3rem'};;
-  gap: 2.75rem;
+position: relative;
 
-  div {
+ul {
+    height: ${props => props.pages ? '40rem' : null};
+    display: flex;
+    flex-direction: ${props => props.pages ? 'column' : 'row'};
+    justify-content: center;
+    align-items: center;
+    margin-top: ${props => props.pages ? '0' : '3rem'};;
+    gap: 2.75rem;
+
+  }
+
+  li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,4 +43,6 @@ export const Line = styled.span`
   width: ${props => props.pages ? '2px' : '50%'};
   height: ${props => props.pages ? '110%' : '2px'};
   position: absolute;
+  top: ${props => props.pages ? '-5%' : '50%'};
+  left: ${props => props.pages ? '50%' : '25%'};
 `

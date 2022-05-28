@@ -17,9 +17,8 @@ export const Card = () => {
     })
 
     disable.map((item, index) => {
-      item.classList.add('disable')
+      return item.classList.add('disable')
     })
-
   }
 
   function handleCardLeave(e) {
@@ -33,7 +32,7 @@ export const Card = () => {
     })
 
     enable.map((item, index) => {
-      item.classList.remove('disable')
+      return item.classList.remove('disable')
     })
   }
 
@@ -42,19 +41,19 @@ export const Card = () => {
       {actorsData.map((item, index) => {
         return (
           <C.CardContainer key={index} >
-            <a href={item.url}>
+            <a href={item.path}>
               <C.CardBackground
-                src={item.background}
+                src={item.cardBg}
                 alt='Card background'
                 cardOpacity={cardOpacity}
               />
               <C.CardImage
-                src={item.image}
+                src={item.cardPic}
                 alt='Tom spider man'
                 className='card'
                 id={index}
-                onMouseOver={handleCardEnter}
-                onMouseOut={handleCardLeave} />
+                onPointerEnter={handleCardEnter}
+                onPointerLeave={handleCardLeave} />
               <C.CardText>{item.actor}</C.CardText>
             </a>
           </C.CardContainer>
