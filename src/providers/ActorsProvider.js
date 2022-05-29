@@ -43,7 +43,7 @@ const data = [
         director: 'Jon Watts',
         imdb: 'https://www.imdb.com/title/tt10872600/?ref_=nm_flmg_act_4',
         sinopse: 'Com a identidade do Homem-Aranha revelada, Peter pede ajuda ao Doutor Strange. Quando um feitiço corre mal, inimigos perigosos de outros mundos começam a aparecer, forçando Peter a descobrir o que realmente significa ser o Homem-Aranha.',
-        background: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-tom/movie-02/background_YJRhkQBEr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653739872825',
+        background: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-tom/movie-03/background_dm3xm1RuT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653739872245',
         logo: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-tom/movie-03/logo_gn7ZraiESn.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653739869613',
         trailer: 'https://www.imdb.com/video/vi3348546073/?playlistId=tt10872600&ref_=tt_ov_vi',
         images: {
@@ -154,6 +154,7 @@ const ActorContext = createContext(undefined)
 export const ActorsProvider = ({children}) => {
   const [actorsData, setActorsData] = useState(data)
   const [cardId, setCardId] = useState(0)
+  const [movieId, setMovieId] = useState(0)
   const [bgOpacity, setBgOpacity] = useState(0.2)
   const [cardOpacity, setCardOpacity] = useState(1)
 
@@ -165,7 +166,9 @@ export const ActorsProvider = ({children}) => {
     bgOpacity, 
     setBgOpacity, 
     cardOpacity, 
-    setCardOpacity
+    setCardOpacity,
+    movieId, 
+    setMovieId
   }
 
   return (
