@@ -1,18 +1,42 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* perspective: 3000px; */
+  perspective: 3000px;
+`
+
+export const CardCarousel = styled.div`
+  display: flex;
+  justify-content: center;
+  width: calc(100vw / 3 - 10%);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
+  transform: translateY(0vw) rotateY(0deg);
+
+
+.card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(50vw);
+}
+
+.card:nth-child(2) {
+  transform: rotateY(120deg) translateZ(50vw);
+}
+
+.card:nth-child(3) {
+  transform: rotateY(240deg) translateZ(50vw);
+}
+
 `
 
 export const CardContainer = styled.div`
-  position: relative;
   border: 0.5rem solid white;
-  width: 30%;
-  height: 70vh;
-  transition: filter 0.5s ease-in-out;
+  width: 100%;
+  height: 60vh;
+  position: absolute;
+  transition: filter .5s ease-in-out;
   
   .hoverd {
     transform: scale(1.4);

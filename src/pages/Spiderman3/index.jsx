@@ -1,9 +1,7 @@
-import * as C from './styles'
+import { PageLayout } from "../../components/PageLayout"
 
 export const Spiderman3 = () => {
   return (
-    <C.Container>
-      <h1>Spiderman3</h1>
-    </C.Container>
+    <PageLayout />
   )
 }

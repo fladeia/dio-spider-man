@@ -9,9 +9,9 @@ import spider from '../../assets/images/icons/spider.svg'
 import { Fancybox as NativeFancybox } from "@fancyapps/ui/dist/fancybox.esm.js";
 import "@fancyapps/ui/dist/fancybox.css";
 
-export const PageLayout = ({ id }) => {
-  const { actorsData, movieId } = useActor()
-  const { movies } = actorsData[0]
+export const PageLayout = () => {
+  const { actorsData, movieId, cardId } = useActor()
+  const { movies } = actorsData[cardId]
 
   function Fancybox(props) {
     const delegate = props.delegate || "[data-fancybox]";

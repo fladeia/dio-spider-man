@@ -1,4 +1,5 @@
 import { useActor } from '../../providers/ActorsProvider'
+import { Link } from 'react-router-dom'
 import * as C from './styles'
 
 export const Card = () => {
@@ -38,27 +39,32 @@ export const Card = () => {
 
   return (
     <C.Container>
-      {actorsData.map((item, index) => {
-        return (
-          <C.CardContainer key={index} >
-            <a href={item.path}>
-              <C.CardBackground
-                src={item.cardBg}
-                alt='Card background'
-                cardOpacity={cardOpacity}
-              />
-              <C.CardImage
-                src={item.cardPic}
-                alt='Tom spider man'
-                className='card'
-                id={index}
-                onPointerEnter={handleCardEnter}
-                onPointerLeave={handleCardLeave} />
-              <C.CardText>{item.actor}</C.CardText>
-            </a>
-          </C.CardContainer>
-        )
-      })}
+      <C.CardCarousel>
+        {actorsData.map((item, index) => {
+          return (
+            <C.CardContainer
+              key={index}
+              className='card'
+            >
+              <Link to={item.path}>
+                <C.CardBackground
+                  src={item.cardBg}
+                  alt='Card background'
+                  cardOpacity={cardOpacity}
+                />
+                <C.CardImage
+                  src={item.cardPic}
+                  alt='Tom spider man'
+                  id={index}
+                  onPointerEnter={handleCardEnter}
+                  onClick={handleCardEnter}
+                  onPointerLeave={handleCardLeave} />
+                <C.CardText>{item.actor}</C.CardText>
+              </Link>
+            </C.CardContainer>
+          )
+        })}
+      </C.CardCarousel>
     </C.Container>
   )
 }
