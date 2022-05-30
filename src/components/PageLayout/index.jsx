@@ -11,7 +11,7 @@ import "@fancyapps/ui/dist/fancybox.css";
 
 export const PageLayout = () => {
   const { actorsData, movieId, cardId, setMovieId } = useActor()
-  const { movies } = actorsData[cardId] // define which page will be render on router spiderman2, spiderman 2, spiderman3
+  const { movies } = actorsData[cardId]
 
   function Fancybox(props) {
     const delegate = props.delegate || "[data-fancybox]";
@@ -30,7 +30,6 @@ export const PageLayout = () => {
   }
 
   return (
-    // first plane movie 3 doesnt work. "undefined background"
     <C.Container bg={movies[movieId].background}>
       <C.LeftContent>
         <Link to='/'>

@@ -16,19 +16,17 @@ export const CardCarousel = styled.div`
   transition: transform 0.4s ease-in;
   transform: translateY(0vw) rotateY(${props => props.carouselSelected}deg);
 
+  .cards:nth-child(1) {
+    transform: rotateY(0deg) translateZ(48rem);
+  }
 
-.cards:nth-child(1) {
-  transform: rotateY(0deg) translateZ(50vw);
-}
+  .cards:nth-child(2) {
+    transform: rotateY(120deg) translateZ(46vw);
+  }
 
-.cards:nth-child(2) {
-  transform: rotateY(120deg) translateZ(50vw);
-}
-
-.cards:nth-child(3) {
-  transform: rotateY(240deg) translateZ(50vw);
-}
-
+  .cards:nth-child(3) {
+    transform: rotateY(240deg) translateZ(46vw);
+  }
 `
 
 export const CardContainer = styled.div`
@@ -77,5 +75,4 @@ export const CardText = styled.h2`
   bottom: 0;
   width: 100%;
   transition: bottom 1s ease-in-out;
-  
 `

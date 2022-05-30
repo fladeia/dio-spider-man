@@ -8,7 +8,7 @@ export const Container = styled.div`
   background-color: gray;
   background-image: url(${props => props.bg});
   background-size: cover;
-  `
+`
 
 export const LeftContent = styled.div`
   width: 100px;
@@ -26,7 +26,7 @@ export const LeftContent = styled.div`
     width: 50px;
     height: 50px;
     position: absolute;
-    top: 212px;
+    top: 240px;
     left: 26%;
   }
 `
