@@ -11,7 +11,7 @@ import "@fancyapps/ui/dist/fancybox.css";
 
 export const PageLayout = () => {
   const { actorsData, movieId, cardId } = useActor()
-  const { movies } = actorsData[cardId]
+  const { movies } = actorsData[cardId] // define which page will be render on router spiderman2, spiderman 2, spiderman3
 
   function Fancybox(props) {
     const delegate = props.delegate || "[data-fancybox]";

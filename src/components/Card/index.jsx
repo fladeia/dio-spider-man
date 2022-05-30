@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import * as C from './styles'
 
 export const Card = () => {
-  const { actorsData, setCardId, setBgOpacity, cardOpacity, setCardOpacity } = useActor()
+  const { actorsData, setCardId, setBgOpacity, cardOpacity, setCardOpacity, carouselSelected } = useActor()
   const test = [...document.querySelectorAll('.card')]
 
   function handleCardEnter(e) {
@@ -16,6 +16,7 @@ export const Card = () => {
     const disable = test.filter((item) => {
       return !item.classList.contains('hoverd')
     })
+
 
     disable.map((item, index) => {
       return item.classList.add('disable')
@@ -39,12 +40,12 @@ export const Card = () => {
 
   return (
     <C.Container>
-      <C.CardCarousel>
+      <C.CardCarousel carouselSelected={carouselSelected}>
         {actorsData.map((item, index) => {
           return (
             <C.CardContainer
               key={index}
-              className='card'
+              className='cards'
             >
               <Link to={item.path}>
                 <C.CardBackground
@@ -56,6 +57,7 @@ export const Card = () => {
                   src={item.cardPic}
                   alt='Tom spider man'
                   id={index}
+                  className='card'
                   onPointerEnter={handleCardEnter}
                   onClick={handleCardEnter}
                   onPointerLeave={handleCardLeave} />

@@ -50,8 +50,8 @@ ul {
 export const Line = styled.span`
   background-color: white;
   width: ${props => props.pages ? '2px' : '50%'};
-  height: ${props => props.pages ? '110%' : '2px'};
+  height: ${props => props.pages ? '100%' : '2px'};
   position: absolute;
-  top: ${props => props.pages ? '-5%' : '50%'};
+  top: ${props => props.pages ? '0' : '50%'};
   left: ${props => props.pages ? '50%' : '25%'};
 `

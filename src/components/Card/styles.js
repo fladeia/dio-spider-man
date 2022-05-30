@@ -14,18 +14,18 @@ export const CardCarousel = styled.div`
   width: calc(100vw / 3 - 10%);
   transform-style: preserve-3d;
   transition: transform 0.4s ease-in;
-  transform: translateY(0vw) rotateY(0deg);
+  transform: translateY(0vw) rotateY(${props => props.carouselSelected}deg);
 
 
-.card:nth-child(1) {
+.cards:nth-child(1) {
   transform: rotateY(0deg) translateZ(50vw);
 }
 
-.card:nth-child(2) {
+.cards:nth-child(2) {
   transform: rotateY(120deg) translateZ(50vw);
 }
 
-.card:nth-child(3) {
+.cards:nth-child(3) {
   transform: rotateY(240deg) translateZ(50vw);
 }
 

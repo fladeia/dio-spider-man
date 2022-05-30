@@ -25,6 +25,9 @@ export const LeftContent = styled.div`
   img {
     width: 50px;
     height: 50px;
+    position: absolute;
+    top: 212px;
+    left: 26%;
   }
 `
 

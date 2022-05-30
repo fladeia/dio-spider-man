@@ -2,7 +2,7 @@ import { useActor } from '../../providers/ActorsProvider'
 import * as C from './styles'
 
 export const CarouselConttroler = ({ pages, home }) => {
-  const { actorsData, setMovieId, cardId } = useActor()
+  const { actorsData, setMovieId, cardId, setCarouselSelected } = useActor()
   const { movies } = actorsData[cardId]
   const lis = [...document.querySelectorAll('.CarouselItems')]
   let mapOptions
@@ -17,6 +17,19 @@ export const CarouselConttroler = ({ pages, home }) => {
     })
 
     e.target.classList.add('active')
+
+    if (e.target.id == Number(0)) {
+      setCarouselSelected(0);
+    }
+
+    if (e.target.id == 1) {
+      setCarouselSelected(240);
+    }
+
+    if (e.target.id == 2) {
+      setCarouselSelected(120);
+    }
+
   }
 
   return (
