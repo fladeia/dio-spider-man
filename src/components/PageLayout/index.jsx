@@ -10,7 +10,7 @@ import { Fancybox as NativeFancybox } from "@fancyapps/ui/dist/fancybox.esm.js";
 import "@fancyapps/ui/dist/fancybox.css";
 
 export const PageLayout = () => {
-  const { actorsData, movieId, cardId } = useActor()
+  const { actorsData, movieId, cardId, setMovieId } = useActor()
   const { movies } = actorsData[cardId] // define which page will be render on router spiderman2, spiderman 2, spiderman3
 
   function Fancybox(props) {
@@ -28,7 +28,7 @@ export const PageLayout = () => {
 
     return <>{props.children}</>;
   }
-  console.log(movies[movieId].background)
+
   return (
     // first plane movie 3 doesnt work. "undefined background"
     <C.Container bg={movies[movieId].background}>

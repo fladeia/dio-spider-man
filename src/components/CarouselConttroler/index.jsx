@@ -5,37 +5,31 @@ export const CarouselConttroler = ({ pages, home }) => {
   const { actorsData, setMovieId, cardId, setCarouselSelected } = useActor()
   const { movies } = actorsData[cardId]
   const lis = [...document.querySelectorAll('.CarouselItems')]
-  let mapOptions
+  let isHome
+  let test = false
 
-  mapOptions = home ? mapOptions = actorsData : movies
+  if (isHome = home) {
+    isHome = actorsData
+  } else {
+    isHome = movies
+    test = true
+  }
 
   function handleClick(e) {
-    setMovieId(e.target.id)
+    test && setMovieId(e.target.id);
 
     lis.map((item, index) => {
       item.classList.remove('active')
     })
 
     e.target.classList.add('active')
-
-    if (e.target.id == Number(0)) {
-      setCarouselSelected(0);
-    }
-
-    if (e.target.id == 1) {
-      setCarouselSelected(240);
-    }
-
-    if (e.target.id == 2) {
-      setCarouselSelected(120);
-    }
-
+    e.target.id == Number(0) ? setCarouselSelected(0) : e.target.id == 1 ? setCarouselSelected(240) : setCarouselSelected(120)
   }
 
   return (
     <C.Container pages={pages}>
       <ul>
-        {mapOptions.map((item, index) => {
+        {isHome.map((item, index) => {
           return (
             <li
               key={index}

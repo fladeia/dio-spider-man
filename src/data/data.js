@@ -1,5 +1,6 @@
 export const data = [
   {
+    id: 1,
     actor: 'Tom Holland',
     cardBg: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-tom/pic-sm-bg-tom_bc96dFmBw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653739870383',
     cardPic: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-tom/spider-man-tom_Ec4Fd1nGh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653739870799',
@@ -53,6 +54,7 @@ export const data = [
     ]
   },
   {
+    id: 2,
     actor: 'Tobey Maguire',
     cardBg: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-tobey/pic-sm-bg-tobey_CF3WUxFT6.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653739874126',
     cardPic: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-tobey/spider-man-tobey_Tm_MKZ5_Qr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653739872635',
@@ -106,6 +108,7 @@ export const data = [
     ]
   },
   {
+    id: 3,
     actor: 'Andrew Garfield',
     cardBg: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-andrew/pic-sm-bg-andrew_MSWAGO_Kc.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1653739876306',
     cardPic: 'https://ik.imagekit.io/ladeiaDev/spiderman/spiderman-andrew/spider-man-andrew_zDkl9ETDj.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653739876675',
