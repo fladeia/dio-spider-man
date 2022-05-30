@@ -28,8 +28,9 @@ export const PageLayout = () => {
 
     return <>{props.children}</>;
   }
-
+  console.log(movies[movieId].background)
   return (
+    // first plane movie 3 doesnt work. "undefined background"
     <C.Container bg={movies[movieId].background}>
       <C.LeftContent>
         <Link to='/'>
