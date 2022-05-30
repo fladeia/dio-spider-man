@@ -1,7 +1,7 @@
 <h1>Projeto multiverso Spider-man DIO</h1>
 
 <h1>
-  <img src="#">
+  <img src="https://ik.imagekit.io/ladeiaDev/preview_DbFd7luf-g.png?ik-sdk-version=javascript-1.4.3&updatedAt=1653949596990">
 </h1>
 
 <h3 align="center">
