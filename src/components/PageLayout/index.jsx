@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useActor } from '../../providers/ActorsProvider'
 import { Link } from 'react-router-dom'
 import { RiPlayCircleFill } from 'react-icons/ri'
@@ -10,7 +10,8 @@ import { Fancybox as NativeFancybox } from "@fancyapps/ui/dist/fancybox.esm.js";
 import "@fancyapps/ui/dist/fancybox.css";
 
 export const PageLayout = () => {
-  const { actorsData, movieId, cardId, setMovieId } = useActor()
+  const [movieId, setMovieId] = useState(0)
+  const { actorsData, cardId } = useActor()
   const { movies } = actorsData[cardId]
 
   function Fancybox(props) {
@@ -35,7 +36,7 @@ export const PageLayout = () => {
         <Link to='/'>
           <img src={spider} alt='Ícone aranha'></img>
         </Link>
-        <CarouselConttroler pages></CarouselConttroler>
+        <CarouselConttroler pages setMovieId={setMovieId} ></CarouselConttroler>
       </C.LeftContent>
       <C.RightContent>
         <C.TopContent>

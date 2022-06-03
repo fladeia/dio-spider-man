@@ -8,7 +8,6 @@ const ActorContext = createContext(undefined)
 export const ActorsProvider = ({children}) => {
   const [actorsData, setActorsData] = useState(data)
   const [cardId, setCardId] = useState(0)
-  const [movieId, setMovieId] = useState(0)
 
   const [carouselSelected, setCarouselSelected] = useState(0)
 
@@ -17,8 +16,6 @@ export const ActorsProvider = ({children}) => {
     setActorsData, 
     cardId, 
     setCardId, 
-    movieId, 
-    setMovieId,
     carouselSelected, 
     setCarouselSelected
   }
