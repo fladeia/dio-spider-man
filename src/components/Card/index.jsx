@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import { useActor } from '../../providers/ActorsProvider'
 import { Link } from 'react-router-dom'
 import * as C from './styles'
 
-export const Card = () => {
-  const { actorsData, setCardId, setBgOpacity, cardOpacity, setCardOpacity, carouselSelected } = useActor()
+export const Card = ({ setBgOpacity }) => {
+  const { actorsData, setCardId, carouselSelected } = useActor()
   const test = [...document.querySelectorAll('.card')]
+  const [cardOpacity, setCardOpacity] = useState(1)
+
 
   function handleCardEnter(e) {
     e.target.classList.add('hoverd')
@@ -18,7 +21,7 @@ export const Card = () => {
     })
 
 
-    disable.map((item, index) => {
+    disable.map((item) => {
       return item.classList.add('disable')
     })
   }
@@ -33,7 +36,7 @@ export const Card = () => {
       return item.classList.contains('disable')
     })
 
-    enable.map((item, index) => {
+    enable.map((item) => {
       return item.classList.remove('disable')
     })
   }
@@ -59,7 +62,6 @@ export const Card = () => {
                   id={index}
                   className='card'
                   onPointerEnter={handleCardEnter}
-                  onClick={handleCardEnter}
                   onPointerLeave={handleCardLeave} />
                 <C.CardText>{item.actor}</C.CardText>
               </Link>

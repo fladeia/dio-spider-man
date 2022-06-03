@@ -9,8 +9,7 @@ export const ActorsProvider = ({children}) => {
   const [actorsData, setActorsData] = useState(data)
   const [cardId, setCardId] = useState(0)
   const [movieId, setMovieId] = useState(0)
-  const [bgOpacity, setBgOpacity] = useState(0.2)
-  const [cardOpacity, setCardOpacity] = useState(1)
+
   const [carouselSelected, setCarouselSelected] = useState(0)
 
   const value = {
@@ -18,10 +17,6 @@ export const ActorsProvider = ({children}) => {
     setActorsData, 
     cardId, 
     setCardId, 
-    bgOpacity, 
-    setBgOpacity, 
-    cardOpacity, 
-    setCardOpacity,
     movieId, 
     setMovieId,
     carouselSelected, 

@@ -7,7 +7,8 @@ import spider from '../../assets/images/spiderIcon.svg'
 import * as C from './styles'
 
 export const Home = () => {
-  const { actorsData, cardId, bgOpacity, setCardId } = useActor()
+  const { actorsData, cardId, setCardId } = useActor()
+  const [bgOpacity, setBgOpacity] = useState(0.2)
   const [bg, setBg] = useState()
 
   function handleClick(e) {
@@ -38,7 +39,7 @@ export const Home = () => {
           })}
         </ul>
       </C.Nav>
-      <Card />
+      <Card setBgOpacity={setBgOpacity} />
       <CarouselConttroler home={true} />
     </C.Container>
   )
