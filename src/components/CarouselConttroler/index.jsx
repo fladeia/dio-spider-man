@@ -35,7 +35,7 @@ export const CarouselConttroler = ({ pages, home, setMovieId }) => {
               key={index}
               id={index}
               className='CarouselItems'
-              onClick={handleClick} //insert on each item the handleclick function. (addEventListener, alternative)
+              onClick={handleClick}
             >
               {index + 1}
             </li>
