@@ -1,8 +1,8 @@
 import { useActor } from '../../providers/ActorsProvider'
 import * as C from './styles'
 
-export const CarouselConttroler = ({ pages, home, setMovieId }) => {
-  const { actorsData, cardId, setCarouselSelected } = useActor()
+export const CarouselConttroler = ({ pages, home, setMovieId, setCarouselSelected }) => {
+  const { actorsData, cardId } = useActor()
   const { movies } = actorsData[cardId]
   const lis = [...document.querySelectorAll('.CarouselItems')]
   let isHome

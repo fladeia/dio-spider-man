@@ -3,8 +3,8 @@ import { useActor } from '../../providers/ActorsProvider'
 import { Link } from 'react-router-dom'
 import * as C from './styles'
 
-export const Card = ({ setBgOpacity }) => {
-  const { actorsData, setCardId, carouselSelected } = useActor()
+export const Card = ({ setBgOpacity, carouselSelected }) => {
+  const { actorsData, setCardId } = useActor()
   const test = [...document.querySelectorAll('.card')]
   const [cardOpacity, setCardOpacity] = useState(1)
 

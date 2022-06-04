@@ -8,6 +8,7 @@ import * as C from './styles'
 
 export const Home = () => {
   const { actorsData, cardId, setCardId } = useActor()
+  const [carouselSelected, setCarouselSelected] = useState(0)
   const [bgOpacity, setBgOpacity] = useState(0.2)
   const [bg, setBg] = useState()
 
@@ -39,8 +40,8 @@ export const Home = () => {
           })}
         </ul>
       </C.Nav>
-      <Card setBgOpacity={setBgOpacity} />
-      <CarouselConttroler home={true} />
+      <Card setBgOpacity={setBgOpacity} carouselSelected={carouselSelected} />
+      <CarouselConttroler home={true} setCarouselSelected={setCarouselSelected} />
     </C.Container>
   )
 }

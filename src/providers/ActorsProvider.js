@@ -8,15 +8,12 @@ const ActorContext = createContext(undefined)
 export const ActorsProvider = ({children}) => {
   const [actorsData, setActorsData] = useState(data)
   const [cardId, setCardId] = useState(0)
-  const [carouselSelected, setCarouselSelected] = useState(0)
 
   const value = {
     actorsData, 
     setActorsData, 
     cardId, 
     setCardId, 
-    carouselSelected, 
-    setCarouselSelected
   }
 
   return (
